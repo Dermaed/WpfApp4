@@ -15,9 +15,6 @@ using System.Windows.Shapes;
 
 namespace WpfApp4
 {
-    /// <summary>
-    /// Логика взаимодействия для MainWindow.xaml
-    /// </summary>
     public partial class MainWindow : Window
     {
         string leftop = "";
@@ -28,8 +25,10 @@ namespace WpfApp4
             InitializeComponent();
             foreach (UIElement c in LayoutRoot.Children)
             {
-                if (char Button)
+                if (c is Button)
+                {
                     ((Button)c).Click += Button_Click;
+                }  
             }
         }
     }
